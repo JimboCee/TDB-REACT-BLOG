@@ -1,0 +1,23 @@
+.header {
+    margin-top: 60px;
+}
+
+.headerTitleLg {
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    color: #444;
+    top: 20px;
+}
+
+.headerTitleSm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 18%;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 19.5px;
+}
+
