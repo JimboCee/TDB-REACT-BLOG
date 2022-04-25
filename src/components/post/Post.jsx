@@ -10,8 +10,10 @@ export default function Post() {
       />
       <div className="postInfo">
         <div className="postCategories">
-          <span className="postCategories">Data Analysis</span>
-          <span className="postCategories">Web Development</span>
+          <span className="postCategories">Data Analysis/</span>
+          <span className="postCategories">Web Development/</span>
+          <span className="postCategories">News/</span>
+          <span className="postCategories">Your Time at TDA/</span>
         </div>
         <span className="postTitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
         <hr/>
