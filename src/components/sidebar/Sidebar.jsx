@@ -10,8 +10,7 @@ export default function Sidebar() {
             height={150} 
             width={150} 
             alt="Official Logo for The Developer Bootcamp"></img>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            <p className="sidebarInfo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                 Ea earum optio, consectetur neque aliquid commodi consequuntur nemo. 
                 Ad veritatis ipsum nam corporis autem!</p>
         </div>

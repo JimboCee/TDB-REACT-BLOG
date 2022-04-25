@@ -33,9 +33,6 @@
     margin-top: 15px;
 }
 
-.sidebar > p {
-    padding: 30px;
-}
 
 .sidebarList {
     list-style: none;
@@ -47,6 +44,7 @@
     width: 50%;
     margin-top: 15px;
     cursor: pointer;
+    font-family: 'Varela', serif;
 }
 
 .sidebarSocial{
@@ -61,4 +59,8 @@
     font: size 16px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+.sidebarInfo {
+    font-family: 'Varela', serif;
 }
