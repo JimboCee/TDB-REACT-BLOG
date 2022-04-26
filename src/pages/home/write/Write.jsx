@@ -1,7 +1,8 @@
+import './Write.css';
 import React, {useState} from "react";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import './Write.css'
+
 
 function Write() {
     const [value, setValue] = useState("")
