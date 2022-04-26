@@ -1,0 +1,64 @@
+.register {
+    height: calc(100vh - 50px);
+    /* this calculates the position of the Register wrapper, relative to the 
+    topbar within the App itself. Prevents elements bleeding over each other */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.699),
+        rgba(216, 208, 208, 0.966)
+        /* smooth grey gradient so as not to make the background image appear so 'direct' */
+    ),
+    url("http://wonderfulengineering.com/wp-content/uploads/2014/04/code-wallpaper-38.jpg");
+    background-size: cover;
+}
+        
+.registerTitle {
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+}
+
+.registerButton {
+    font-family: 'Inter', sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #405780;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.registerLoginButton, .label {
+    font-family: 'Inter', sans-serif;
+}
+
+.emailLabel, .passwordLabel {
+    font-family: 'Inter', sans-serif;
+}
+
+.registerForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registerForm > label {
+    margin: 10px 0;
+    
+}
+
+.registerLoginButton {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ffc885;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: black;
+    border-radius: 10px;
+}
