@@ -1,3 +1,22 @@
 .home {
     display: flex;
 }
+
+.aboutP {
+    text-align: center;
+    align-items: center;
+}
+
+.abouth1 {
+    
+}
+
+.aboutText {
+    display: flex;
+    font-size: 25px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    color: #444;
+    top: 20px;
+}
