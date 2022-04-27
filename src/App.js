@@ -45,7 +45,7 @@ function App() {
         <Route path="/Single" element={<Single />} />
     
       
-
+        {/* error element stays at the end, app breaks if its moved  */}
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
