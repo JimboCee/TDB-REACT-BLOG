@@ -3,6 +3,9 @@
 }
 
 .singlePostWrapper {
+    width: 1300px;
+    height: 200px;
+
     padding: 20px;
     padding-right: 0;
 }
