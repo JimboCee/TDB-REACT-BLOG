@@ -1,8 +1,9 @@
 import "./Post.css";
 import { Link } from "react-router-dom";
 
-export default function Post({post}) {
+export default function Post({post, setSinglePost}) {
   const PF = "http://localhost:5000/images/";
+  // console.log(post)
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
@@ -12,9 +13,12 @@ export default function Post({post}) {
             <span className="postCategories">{c.name}</span>
           ))}
         </div>
-        <Link to={`/post/${post._id}`} className="link">
+        <Link onClick={() => {setSinglePost(post)}} to={`/Single`} className="link">
           <span className="postTitle">{post.title}</span>
         </Link>
+        {/* <Link to={`/post/${post._id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link> */}
         <hr />
         <span className="postDate">
           {new Date(post.createdAt).toDateString()}

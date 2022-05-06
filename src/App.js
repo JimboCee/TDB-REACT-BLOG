@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
 
   BrowserRouter as Router,
@@ -24,6 +25,7 @@ import Error from "./pages/error/Error";
 
 
 function App() {
+  const [singlePost, setSinglePost] = useState();
   return (
     <Router>
       <TopBar />
@@ -36,13 +38,25 @@ function App() {
         <Link to={"/Single"}> Single </Link>
       
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home setSinglePost = {setSinglePost} />} />
         <Route path="/write" element={<Write />} />
         <Route path="/about" element={<About />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Settings" element={<Settings />} />
-        <Route path="/Single" element={<Single />} />
+        {
+          singlePost? 
+          <Route path="/Single" element={<Single singlePost = {singlePost} />} />:
+          null
+        }
+        {/* <Route path="/Single" element={ 
+          singlePost?
+        <Single singlePost = {singlePost} />:
+        <Home />
+        } /> */}
+        {/* <Route path="/Single">
+          <Single singlePost = {singlePost} />
+        </Route> */}
     
       
         {/* error element stays at the end, app breaks if its moved  */}

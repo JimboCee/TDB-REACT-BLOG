@@ -61,3 +61,11 @@
     font-size: 30px;
     font-weight: 600;
 }
+
+.singlePostDate {
+    font-family: 'Varela Round', sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #999;
+    margin-top: 15px;
+}
