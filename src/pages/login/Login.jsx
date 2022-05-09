@@ -22,7 +22,7 @@ export default function Login() {
       dispatch({ type: "LOGIN_FAILURE" });
     }
   };
-  console.log(isFetching);
+  
   return (
     <div className="login">
       <span className="loginTitle">Login</span>

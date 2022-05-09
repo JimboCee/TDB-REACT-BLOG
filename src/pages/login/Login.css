@@ -32,6 +32,11 @@
     padding: 10px;
 }
 
+.loginButton:disabled{
+    cursor: not-allowed;
+    border-color: #fc0303;
+}
+
 .loginRegisterButton, .label {
     font-family: 'Inter', sans-serif;
 }
