@@ -5,9 +5,9 @@ export default function topBar() {
   return (
       <div className="top">
         <div className="topLeft">
-        <i className="topIcon fa-brands fa-facebook-square"></i>
-        <i className="topIcon fa-brands fa-twitter-square"></i>
-        <i className="topIcon fa-brands fa-linkedin"></i>
+        <a href="https://www.facebook.com/thedeveloperacademy/"><i className="topIcon fa-brands fa-facebook-square"></i></a>
+        <a href="https://twitter.com/TheDevAcademy"><i className="topIcon fa-brands fa-twitter-square"></i></a>
+        <a href="https://github.com/TDAWebDevBootcamp"><i className="topIcon fa-brands fa-linkedin"></i></a>
         </div>
 
         <div className="topCenter">
