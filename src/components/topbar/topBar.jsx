@@ -12,16 +12,17 @@ export default function topBar() {
 
         <div className="topCenter">
           <ul className="topList">
-            <li><Link to='/'>HOME</Link></li>
-            <li><Link to='/write'>WRITE</Link></li>
-            <li><Link to='/about'>ABOUT</Link></li>
-            <li><Link to='/Login'>LOGIN</Link></li>
-            <li><Link to='/Register'>REGISTER</Link></li>
-            
+            <li className="topListItem"><Link to='/'>HOME</Link></li>
+            <li className="topListItem"><Link to='/write'>WRITE</Link></li>
+            <li className="topListItem"><Link to='/about'>ABOUT</Link></li>            
           </ul>
         </div>
 
         <div className="topRight">
+          <ul className="rightList">
+            <li><Link to='/Login'>LOGIN</Link></li>
+            <li><Link to='/Register'>REGISTER</Link></li>
+          </ul>
           <img
           className="topImg" 
           src="https://images.pexels.com/photos/942872/pexels-photo-942872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
