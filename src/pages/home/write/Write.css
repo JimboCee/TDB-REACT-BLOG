@@ -1,18 +1,80 @@
-.Write {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 5em;
+.write {
+    padding-top: 50px;
 }
 
-.editor {
-    margin-right: 10em;
+.writeForm {
+    position: relative;
 }
 
-.ck-editor__editable_inline {
-    min-height: 500px
+.writeFormGroup {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
 }
 
-.writeHeadline {
-    text-align: center;
-    font-family: 'Inter', sans-serif;
+.writeIcon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #293952;
+    cursor: pointer;
 }
+
+.writeInput {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+}
+
+.writeInput:focus {
+    outline: none;
+}
+
+.writeText{
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.writeSubmit {
+    position: absolute;
+    top: 20px;
+    right: 425px;
+    color: white;
+    background-color: #f85800;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.writeImage {
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.writeFormCats {
+    border: 1px solid grey;
+    padding: 10px;
+    margin-left: 150px;
+    width: 68vw;
+    background-color: #e1e2e2 ;
+    border-radius: 5px;
+}
+
+.postCats, #postCats {
+    margin-left: 150px;
+    font-family: 'Varela Round', sans-serif;
+}
+
