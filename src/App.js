@@ -34,8 +34,8 @@ function App() {
         <Link to={"/about"}> About </Link>
         <Link to={"/Login"}> Login </Link>
         <Link to={"/Register"}> Register </Link>
-        <Link to={"/Settings"}> Settings </Link>
-        <Link to={"/Single"}> Single </Link>
+        {/* <Link to={"/Settings"}> Settings </Link>
+        <Link to={"/Single"}> Single </Link> */}
       
       <Routes>
         <Route path="/" element={<Home setSinglePost = {setSinglePost} />} />
