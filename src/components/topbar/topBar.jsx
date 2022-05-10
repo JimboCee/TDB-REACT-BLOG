@@ -1,7 +1,18 @@
-import "./topBar.css";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-export default function topBar() {
-  
+import { Context } from "../../context/Context";
+import "./topBar.css";
+
+
+
+
+export default function TopBar() {
+  const { user, dispatch } = useContext(Context);
+
+  const handleLogout = () => {
+    dispatch({ type: "LOGOUT" })
+  };
+   
   return (
       <div className="top">
         <div className="topLeft">
@@ -14,7 +25,9 @@ export default function topBar() {
           <ul className="topList">
             <li className="topListItem"><Link to='/'>HOME</Link></li>
             <li className="topListItem"><Link to='/write'>WRITE</Link></li>
-            <li className="topListItem"><Link to='/about'>ABOUT</Link></li>            
+            <li className="topListItem"><Link to='/about'>ABOUT</Link></li>
+            <li className="topListItem" onClick={ handleLogout }> { user && "LOGOUT" }
+          </li>            
           </ul>
         </div>
 
