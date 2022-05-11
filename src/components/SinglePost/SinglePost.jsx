@@ -17,14 +17,13 @@ export default function SinglePost({singlePost}) {
   
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + singlePost);
+      const res = await axios.get("/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
     };
-    // getPost();
-    console.log(singlePost)
-  }, [singlePost]);
+    getPost();
+  }, [path]);
 
   const handleDelete = async () => {
     try {
