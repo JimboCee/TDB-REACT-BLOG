@@ -5,6 +5,7 @@ import {
   Route,
   Link,
   Navigate,
+  Redirect,
 } from "react-router-dom";
 
 import TopBar from "./components/topbar/topBar";
@@ -47,7 +48,10 @@ function App() {
         {/* <Route path="/Single">
           <Single singlePost = {singlePost} />
         </Route> */}
-
+        {/* ------------------------------------------------------------------------- */}
+        {/* checkout this redirect component if you need it */}
+        {/* <Redirect to="/" /> */}
+        {/* ------------------------------------------------------------------------- */}
         {/* error element stays at the end, app breaks if its moved  */}
         <Route path="*" element={<Error />} />
       </Routes>
