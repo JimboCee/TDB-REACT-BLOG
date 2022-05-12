@@ -36,11 +36,13 @@ export default function TopBar() {
             <li><Link to='/Login'>LOGIN</Link></li>
             <li><Link to='/Register'>REGISTER</Link></li>
           </ul>
+          <Link to="/settings">
           <img
           className="topImg" 
           src="https://images.pexels.com/photos/942872/pexels-photo-942872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="An Open Book, placeholder for UserIcons"
           />
+          </Link>
           <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
