@@ -102,6 +102,7 @@ export default function SinglePost({ id }) {
           <textarea
             className="singlePostDescInput"
             value={post.desc}
+            // STILL NEEDS REFACTORING, what is it for
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
