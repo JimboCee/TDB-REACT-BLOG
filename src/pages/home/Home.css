@@ -1,3 +1,5 @@
 .home {
     display: flex;
+    background: rgb(255,200,133);
+    background: radial-gradient(circle, rgba(255,200,133,0.5186275193671219) 100%, rgba(248,88,0,1) 100%);
 }
