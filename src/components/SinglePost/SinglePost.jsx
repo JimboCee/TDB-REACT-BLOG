@@ -5,29 +5,40 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./SinglePost.css";
 
-export default function SinglePost({singlePost}) {
+export default function SinglePost({ id }) {
   const location = useLocation();
-  const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
   const PF = "http://localhost:5000/images/";
   const { user } = useContext(Context);
-  const [title, setTitle] = useState("");
+  // const path = location.pathname.split("/")[2];
+  // const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-  
+
+  // useEffect(() => {
+  //   const getPost = async () => {
+  //     const res = await axios.get("/posts/" + path);
+  //     setPost(res.data);
+  //     // setTitle(res.data.title);
+  //     // setDesc(res.data.desc);
+  //   };
+  //   getPost();
+  // }, [path]);
+
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get("/posts/" + id);
+      // console.log(res);
+      // setTitle(res.data.title);
+      // setDesc(res.data.desc);
       setPost(res.data);
-      setTitle(res.data.title);
-      setDesc(res.data.desc);
     };
     getPost();
-  }, [path]);
+  }, []);
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
+      await axios.delete(`/posts/${id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -36,33 +47,33 @@ export default function SinglePost({singlePost}) {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`/posts/${id}`, {
         username: user.username,
-        title,
-        desc,
+        title: post.title,
+        desc: post.desc,
       });
-      setUpdateMode(false)
+      setUpdateMode(false);
     } catch (err) {}
   };
 
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
-        {singlePost.photo && (
-          <img src={PF + singlePost.photo} alt="" className="singlePostImg" />
+        {post.photo && (
+          <img src={PF + post.photo} alt="" className="singlePostImg" />
         )}
         {updateMode ? (
           <input
             type="text"
-            value={title}
+            value={post.title}
             className="singlePostTitleInput"
             autoFocus
-            onChange={(e) => setTitle(e.target.value)}
+            // onChange={(e) => setTitle(e.target.value)}
           />
         ) : (
           <h1 className="singlePostTitle">
-            {singlePost.title}
-            {singlePost.username === user?.username && (
+            {post.title}
+            {post.username === user?.username && (
               <div className="singlePostEdit">
                 <i
                   className="singlePostIcon far fa-edit"
@@ -79,22 +90,23 @@ export default function SinglePost({singlePost}) {
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
             Author:
-            <Link to={`/?user=${singlePost.username}`} className="link">
-              <b> {singlePost.username}</b>
+            <Link to={`/?user=${post.username}`} className="link">
+              <b> {post.username}</b>
             </Link>
           </span>
           <span className="singlePostDate">
-            {new Date(singlePost.createdAt).toDateString()}
+            {new Date(post.createdAt).toDateString()}
           </span>
         </div>
         {updateMode ? (
           <textarea
             className="singlePostDescInput"
-            value={singlePost.desc}
+            value={post.desc}
+            // STILL NEEDS REFACTORING, what is it for
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="singlePostDesc">{singlePost.desc}</p>
+          <p className="singlePostDesc">{post.desc}</p>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>
