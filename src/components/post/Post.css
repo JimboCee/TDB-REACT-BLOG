@@ -1,6 +1,8 @@
 .post {
     width: 375px;
     margin: 0px 25px 40px 25px;
+    border: 2.5px gray solid;
+    border-radius: 10px;
 }
 
 .postImg {
@@ -32,6 +34,7 @@
     font-weight: 700;
     margin-top: 15px;
     cursor: pointer;
+    align-items: center;
 }
 
 .singlePostDate {
@@ -54,5 +57,7 @@
     -webkit-line-clamp: 4;
     /* dictates how many lines of text are shown in the postdescription */
     -webkit-box-orient: vertical;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
