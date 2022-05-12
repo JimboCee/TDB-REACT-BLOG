@@ -1,12 +1,15 @@
 import Sidebar from "../../../components/sidebar/Sidebar";
 import SinglePost from "../../../components/SinglePost/SinglePost";
-import "./Single.css"
+import "./Single.css";
+import { useParams } from "react-router-dom";
 
-export default function Single({singlePost}) {
+// console.log(useParams());
+export default function Single() {
+  const { id } = useParams();
   return (
     <div className="single">
-        <SinglePost singlePost = {singlePost}  />
-        <Sidebar />
+      <SinglePost id={id} />
+      <Sidebar />
     </div>
-  )
+  );
 }
