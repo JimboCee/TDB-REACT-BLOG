@@ -22,11 +22,11 @@ function App () {
   return (
     <Router>
       <TopBar />
-      <Link to={"/"}>Home</Link>
+      {/* <Link to={"/"}>Home</Link>
       <Link to={"/write"}>Write</Link>
       <Link to={"/about"}>About</Link>
       <Link to={"/Login"}>Login</Link>
-      <Link to={"/Register"}>Register</Link>
+      <Link to={"/Register"}>Register</Link> */}
 
       <Routes>
         <Route path="/" element={<Home setSinglePost={setSinglePost} />} />

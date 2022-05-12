@@ -19,7 +19,7 @@
 .singlePostTitle {
     text-align: center;
     margin: 10px;
-    font-family: 'Lora', serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 28px;
 }
 
@@ -50,13 +50,13 @@
     color: #4e2f2f;
 }
 
-.singlePostDescription{
+.singlePostDesc{
     color: rgb(53, 52, 52);
     font-size: 18px;
     line-height: 25px;
 }
 
-.singlePostDescription::first-letter{
+.singlePostDesc::first-letter{
     margin-left: 20px;
     font-size: 30px;
     font-weight: 600;
